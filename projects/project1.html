@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Store</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+      }
+
+      .header {
+        background-color: orange;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .header h1 {
+        color: white;
+        font-size: 2rem;
+      }
+
+      .header ul {
+        list-style-type: none;
+        display: flex;
+      }
+
+      .header li {
+        padding: 10px;
+      }
+
+      .header a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+      }
+
+      .header a:hover {
+        text-decoration: underline;
+      }
+
+      .row {
+        display: flex;
+        justify-content: center;
+        padding: 60px 20px;
+      }
+
+      .box {
+        background-color: white;
+        border: 1px solid #ccc;
+        width: 300px;
+        padding: 20px;
+        text-align: center;
+        margin: 10px;
+      }
+
+      .box img {
+        width: 100%;
+      }
+
+      .box h3 {
+        margin-top: 15px;
+        color: #333;
+      }
+
+      .box h4 {
+        color: #777;
+        margin: 10px 0;
+      }
+
+      .box button {
+        padding: 10px 20px;
+        background-color:rgb(40, 190, 40);
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      .row2 {
+        display: flex;
+        justify-content: center;
+        padding: 50px;
+        background-color: aqua;
+      }
+
+      .row2 img {
+        width: 300px;
+        margin-right: 20px;
+      }
+
+      .row2 .box {
+        background-color: white;
+        padding: 20px;
+        width: 500px;
+        text-align: center;
+      }
+
+      .footer {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+
+      footer {
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="header">
+        <div>
+          <h1>My Store</h1>
+        </div>
+        <div>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="box">
+          <img src="images/1.png" alt="Product 1" />
+          <h3>Product 1</h3>
+          <h4>This is the description of the product</h4>
+          <p>Price: $25</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="box">
+          <img src="images/2.png" alt="Product 2" />
+          <h3>Product 2</h3>
+          <h4>This is the description of the product</h4>
+          <p>Price: $25</p>
+          <button>Add to Cart</button>
+        </div>
+        <div class="box">
+          <img src="images/3.png" alt="Product 3" />
+          <h3>Product 3</h3>
+          <h4>This is the description of the product</h4>
+          <p>Price: $25</p>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="row2">
+        <img src="images/4.png" alt="Image 4" />
+        <div class="box">
+          <h3>Heading</h3>
+          <h4>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo
+            molestiae aut doloremque iure quam amet voluptas! Nam, rerum aliquam
+            inventore enim ad eveniet voluptatibus id minus, quasi nobis omnis
+            et?
+          </h4>
+        </div>
+      </div>
+
+      <div class="row2" style="background-color: aliceblue;">
+        <div class="box">
+          <h3>Heading</h3>
+          <h4>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo
+            molestiae aut doloremque iure quam amet voluptas! Nam, rerum aliquam
+            inventore enim ad eveniet voluptatibus id minus, quasi nobis omnis
+            et?
+          </h4>
+        </div>
+
+        <img src="images/5.png" alt="Image 5" />
+      </div>
+
+      <div class="footer">
+        <footer>&copy; 2024 My Store. All rights reserved.</footer>
+      </div>
+    </div>
+  </body>
+</html>
