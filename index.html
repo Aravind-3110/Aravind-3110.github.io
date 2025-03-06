@@ -1,298 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bathula Aravind | Full Stack Developer</title> <!-- Updated title -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aravind Bathula | Full Stack Developer</title>
     <link rel="icon" href="assets/images/ball.png" type="image/x-icon" />
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
-      body {
-        font-family: 'Arial', sans-serif;
-        background-color: #f5f5f5;
-        color: #333;
-      }
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg,#b99737,#e64e4e);
+            color:black;
+            line-height: 1.6;
+            transition: background 0.5s ease;
+        }
 
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-      }
+        header {
+            background: rgba(66, 84, 121, 0.9);
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
 
-      header {
-        background-color: #282c34;
-        padding: 20px;
-      }
+        header:hover {
+            background: rgba(31, 38, 46, 0.9);
+            transform: translateY(-5px);
+        }
 
-      .header-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
+        header h1 {
+            color: #e74c3c;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
 
-      header h1 {
-        color: #fff;
-      }
-
-      nav ul {
-        list-style: none;
-        display: flex;
-      }
-
-      nav ul li {
-        margin-left: 20px;
-      }
-
-      nav ul li a {
-        color: #fff;
-        text-decoration: none;
-        font-weight: bold;
-      }
-
-      nav ul li a:hover {
-        color: #61dafb;
-      }
-
-      .row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 40px 0;
-      }
-
-      section {
-        padding: 40px 0;
-      }
-
-      h1 {
-        font-size: 2rem;
-        margin-bottom: 20px;
-      }
-
-      h2 {
-        font-size: 1.5rem;
-        margin-bottom: 10px;
-      }
-
-      .home-content {
-        flex: 1;
-      }
-
-      .home-image {
-        flex: 1;
-        text-align: center;
-      }
-
-      .home-image img {
-        width: 80%;
-        max-width: 400px;
-        border-radius: 50%;
-      }
-
-      .projects-container {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-      }
-
-      .project-item {
-        background: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        width: calc(33.333% - 20px);
-        text-align: center;
-      }
-
-      .project-item h3 {
-        font-size: 1.2rem;
-        margin-bottom: 10px;
-      }
-
-      .project-item p {
-        margin-bottom: 10px;
-      }
-
-      button {
-        background-color: #61dafb;
-        border: none;
-        padding: 10px 20px;
-        color: #fff;
-        cursor: pointer;
-        font-weight: bold;
-        border-radius: 5px;
-        transition: background-color 0.3s;
-      }
-
-      button:hover {
-        background-color: #21a1f1;
-      }
-
-      .contact-form {
-        flex: 1;
-      }
-
-      .contact-info {
-        flex: 1;
-      }
-
-      .contact-form input,
-      .contact-form textarea {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 20px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-      }
-
-      footer {
-        background-color: #282c34;
-        color: #fff;
-        text-align: center;
-        padding: 20px 0;
-      }
-
-      footer p {
-        margin: 0;
-      }
-
-      @media screen and (max-width: 768px) {
-        .header-row {
-          flex-direction: column;
-          text-align: center;
+        header h1:hover {
+            transform: scale(1.1);
+            color: #f39c12;
         }
 
         nav ul {
-          flex-direction: column;
-          margin-top: 20px;
+            list-style: none;
+            display: flex;
         }
 
         nav ul li {
-          margin: 10px 0;
+            margin-left: 20px;
+            position: relative;
         }
 
-        .project-item {
-          width: calc(50% - 20px);
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+            transition: color 0.3s ease, transform 0.3s ease;
         }
-      }
+
+        nav ul li a::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: #e74c3c;
+            bottom: 0;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            color: #f39c12;
+            transform: translateY(-5px);
+        }
+
+        nav ul li a:hover::before {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero, .about, .projects, .skills, .contact {
+            text-align: center;
+            padding: 80px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            margin: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hero:hover, .about:hover, .projects:hover, .skills:hover, .contact:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .projects-container, .skills-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .project-item, .skill-item {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            flex: 1 1 calc(20% - 20px);
+            min-width: 150px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+        }
+
+        .project-item:hover, .skill-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .project-item a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #e74c3c;
+            transition: color 0.3s ease;
+        }
+
+        .project-item a:hover {
+            color: #f39c12;
+        }
+
+        /* Clean and modern contact form */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            max-width: 500px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .contact-form input:focus, 
+        .contact-form textarea:focus {
+            border-color: #f39c12;
+            transform: translateY(-5px);
+            outline: none;
+        }
+
+        .contact-form button {
+            padding: 15px 30px;
+            background: linear-gradient(to right, #f39c12, #e74c3c);
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background: linear-gradient(to right, #e74c3c, #c0392b);
+            transform: translateY(-5px);
+        }
+
+        footer {
+            background: rgba(40, 44, 52, 0.9);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            transition: background 0.5s ease;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #f39c12;
+        }
+
     </style>
-  </head>
-
-  <body>
-    <div class="container">
-      <header>
-        <div class="header-row">
-          <div class="logo">
-            <h1>Bathula Aravind</h1> <!-- Updated name -->
-            <p>Full Stack Developer</p>
-          </div>
-          <nav>
+</head>
+<body>
+    <header>
+        <h1>Aravind Bathula</h1>
+        <nav>
             <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-          </nav>
-        </div>
-      </header>
+        </nav>
+    </header>
 
-      <!-- Home Section -->
-      <section id="home" class="row home">
-        <div class="home-content">
-          <h1>Full Stack Developer</h1>
-          <p>
-            Passionate about creating interactive, dynamic, and responsive web applications.
-            With expertise in frontend and backend technologies, I build seamless user experiences.
-          </p>
-          <div class="buttons">
-            <button class="btn primary-btn">Contact Me</button>
-            <button class="btn secondary-btn">View Resume</button>
-          </div>
-        </div>
-        <div class="home-image">
-          <img src="https://picsum.photos/id/2/400/400" alt="Profile Image" />
-        </div>
-      </section>
+    <div class="container">
+        <section id="home" class="hero">
+            <h1>Full Stack Developer</h1>
+            <p>Building responsive, scalable, and dynamic applications.</p>
+        </section>
 
-      <!-- Projects Section -->
-      <section id="projects" class="row projects">
-        <h1>Projects</h1>
-        <div class="projects-container">
-          <div class="project-item">
-            <h3><a href="project1.html">Project 1: Online Store</a></h3>
-            <p>A fully functional e-commerce web application built with React, Node.js, and MongoDB.</p>
-            <button><a href="project1.html">View Project</a></button>
-          </div>
-          <div class="project-item">
-            <h3><a href="project2.html">Project 2: Portfolio Website</a></h3>
-            <p>A personal portfolio website showcasing skills, projects, and experience.</p>
-            <button><a href="project2.html">View Project</a></button>
-          </div>
-        </div>
-      </section>
+        <section id="about" class="about">
+            <h1>About Me</h1>
+            <p>Passionate Full Stack Developer with expertise in modern web technologies.</p>
+        </section>
 
-      <!-- Services Section -->
-      <section id="services" class="row services">
-        <h1>Services</h1>
-        <div class="services-container">
-          <div class="service-item">
-            <h3>Web Development</h3>
-            <p>Building responsive, scalable, and dynamic web applications using the latest technologies.</p>
-          </div>
-          <div class="service-item">
-            <h3>Mobile App Development</h3>
-            <p>Creating native and cross-platform mobile apps with intuitive interfaces and seamless performance.</p>
-          </div>
-          <div class="service-item">
-            <h3>Backend Development</h3>
-            <p>Developing powerful backend systems using Node.js, Python, and more for secure, reliable performance.</p>
-          </div>
-        </div>
-      </section>
+        <section id="projects" class="projects">
+            <h1>Projects</h1>
+            <div class="projects-container">
+                <div class="project-item">
+                    <h3><a href="projects/project1.html">Project 1</a></h3>
+                    <p>Description of Project 1 - online store</p>
+                </div>
+                <div class="project-item">
+                    <h3><a href="projects/project2.html">Project 2</a></h3>
+                    <p>Description of Project 2 -Bank</p>
+                </div>
+                <div class="project-item">
+                    <h3><a href="projects/mystore/index.html">Project 3</a></h3>
+                    <p>Description of Project 3-mystore</p>
+                </div>
+                <div class="project-item">
+                    <h3><a href="projects/project4/index.html">Project 4</a></h3>
+                    <p>Description of Project 4-college</p>
+                </div>
+                <div class="project-item">
+                    <h3><a href="projects/socialmedia/index.html">Project 5</a></h3>
+                    <p>Description of Project 5-socialmedia</p>
+                </div>
+            </div>
+        </section>
 
-      <!-- About Section -->
-      <section id="about" class="row about">
-        <h1>About Me</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. 
-          Curabitur aliquet felis id mauris maximus, in fringilla enim tincidunt.
-        </p>
-        <h2>Skills</h2>
-        <ul>
-          <li>JavaScript, React, Node.js</li>
-          <li>Python, Django, Flask</li>
-          <li>HTML5, CSS3, SASS</li>
-          <li>Database Management: MongoDB, MySQL</li>
-          <li>Version Control: Git, GitHub</li>
-        </ul>
-        <p>Technologies I work with:</p>
-        <div class="skills-logos">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Node.js_logo.svg" alt="Node.js" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" />
-        </div>
-      </section>
+        <section id="skills" class="skills">
+            <h1>Skills</h1>
+            <div class="skills-container">
+                <div class="skill-item">HTML</div>
+                <div class="skill-item">CSS</div>
+                <div class="skill-item">JavaScript</div>
+                <div class="skill-item">Python</div>
+            </div>
+        </section>
 
-      <!-- Contact Section -->
-      <section id="contact" class="row contact">
-        <h1>Contact Me</h1>
-        <div class="contact-content">
-          <div class="contact-form">
-            <h3>Get in Touch</h3>
-            <form>
-              <input type="text" placeholder="Your Name" required />
-              <input type="email" placeholder="Your Email" required />
-              <textarea placeholder="Your Message" rows="5" required></textarea>
-              <button type="submit">Send Message</button>
+        <section id="contact" class="contact">
+            <h1>Contact Me</h1>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
             </form>
-          </div>
-          <div class="contact-info">
-            <h3>Contact Info</h3>
-            <p><strong>Email:</strong> aravind@example
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Aravind Bathula. All Rights Reserved.</p>
+        <p>Email: <a href="mailto:aravindbathula31@gmail.com">aravindbathula31@gmail.com</a></p>
+    </footer>
+</body>
+</html>
